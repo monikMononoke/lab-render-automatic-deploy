@@ -4,9 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "vite --host",
+    "start": "run -p -l type-check:watch start:dev",
+    "start:dev": "vite --port 8080",
+    "prebuild": "npm run type-check",
     "build": "vite build",
-    "preview": "vite preview"
+    "type-check": "tsc --noEmit --preserveWatchOutput",
+    "type-check:watch": "tsc --noEmit --preserveWatchOutput --watch"
   },
   "devDependencies": {
     "@types/react": "^19.1.8",
@@ -21,6 +24,7 @@
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@mui/material": "^7.3.3",
+    "express": "^5.2.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.8.2"
