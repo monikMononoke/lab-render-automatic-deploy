@@ -179,7 +179,19 @@ docker ps
 docker images
 ```
 
-## Opcional: Subir la imagen a Dockerhub
+## GitHub
+
+Crear un repositorio en GitHub y subir el código de nuestro proyecto a ese repositorio.
+
+## Render
+
+- En render.com, desde nuestro Dashboard hacemos click en el botón "New" y seleccionamos "Web Service" para crear un nuevo servicio web.
+
+- Conectamos nuestro repositorio de GitHub a Render para que pueda acceder al código de nuestro proyecto.
+
+- En Language seleccionamos "Docker" para indicar que vamos a usar un contenedor Docker para ejecutar nuestra aplicación.
+
+## Nota: Cómo subir la imagen a Dockerhub
 
 - Iniciamos sesión en Dockerhub con el siguiente comando:
 
@@ -198,15 +210,3 @@ docker tag render-automatic-deploy lemoncode/render-automatic-deploy
 ```bash
 docker push lemoncode/render-automatic-deploy
 ```
-
-## GitHub
-
-Crear un repositorio en GitHub y subir el código de nuestro proyecto a ese repositorio.
-
-## Render
-
-- En render.com, desde nuestro Dashboard hacemos click en el botón "New" y seleccionamos "Web Service" para crear un nuevo servicio web.
-
-- Conectamos nuestro repositorio de GitHub a Render para que pueda acceder al código de nuestro proyecto.
-
-- En Language seleccionamos "Docker" para indicar que vamos a usar un contenedor Docker para ejecutar nuestra aplicación.
